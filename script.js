@@ -86,15 +86,15 @@ window.onload = function () { // quando a pagina carrega executa essa função
 }
 
 // Previne que usuario use ctrl + S que abriria o save no navegador e salva executa a função de save ao invés disso
-document.addEventListener("keydown", function(event){ // tecla pressionada o event registra qual foi a tecla
-    if(event.ctrlKey && event.key == "s"){ // se o CTRL e o S forem apertados
+document.addEventListener("keydown", function (event) { // tecla pressionada o event registra qual foi a tecla
+    if (event.ctrlKey && event.key == "s") { // se o CTRL e o S forem apertados
         event.preventDefault(); // previne que abra a janela do browser de save
         saveGame(); // salve o jogo
-    } 
+    }
 }, false)
 
 // Function Reset Game
-function resetGame(){
+function resetGame() {
     if (confirm("Tem certeza que deseja resetar o save do jogo? \n \nATENÇÃO: Isso não trará nenhum benificio adicional")) {
         let gameSave = {};
         localStorage.setItem("gameSave", JSON.stringify(gameSave));
