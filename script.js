@@ -82,3 +82,11 @@ window.onload = function () { // quando a pagina carrega executa essa função
     document.querySelector("#cursorCost").innerHTML = cursorCost // atualiza o preço do cursor
     document.querySelector("#cursorAmount").innerHTML = cursorAmount // atualiza o total de cursores
 }
+
+// Previne que usuario use ctrl + S que abriria o save no navegador e salva executa a função de save ao invés disso
+document.addEventListener("keydown", function(event){ // tecla pressionada o event registra qual foi a tecla
+    if(event.ctrlKey && event.key == "s"){ // se o CTRL e o S forem apertados
+        event.preventDefault(); // previne que abra a janela do browser de save
+        saveGame(); // salve o jogo
+    } 
+}, false)
