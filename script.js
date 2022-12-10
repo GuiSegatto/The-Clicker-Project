@@ -37,3 +37,8 @@ function buyCursor() {
         document.querySelector("#cursorAmount").innerHTML = cursorAmount // atualiza o total de cursores
     }
 }
+
+setInterval(function() {   // função de "DPS"
+    gold = gold + cursorAmount // para aumentar podemos adicionar um "* (y)"
+    document.querySelector("#totalGold").innerHTML = gold // atualiza o valor do gold a cada .....
+}, 1000) // 1000ms = 1s
