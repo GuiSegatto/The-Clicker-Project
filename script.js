@@ -22,6 +22,8 @@ document.querySelector("#clickHere").addEventListener("click", () => { addToGold
 document.querySelector("#buyCursor").addEventListener("click", buyCursor)
 // quando clickarmos salva o save do jogo
 document.querySelector("#saveGame").addEventListener("click", saveGame)
+// quando clickar abre a janela de confirmação para resestar o jogo
+document.querySelector("#resetGame").addEventListener("click", resetGame)
 
 // Soma a quantidade passada ao nosso total de gold 
 function addToGold(amount) {
@@ -61,7 +63,7 @@ setInterval(function () { // salva o jogo a cada 60 segundos
 // Load Function
 function loadGame() {
     let savedGame = JSON.parse(localStorage.getItem("gameSave")); // busca o arquivo JSON "gameSave"
-    if (typeof savedGame.gold !== "undefined") gold = savedGame.gold; // previne erros 
+    if (typeof savedGame.gold !== "undefined") gold = savedGame.gold; // previne erros e garante que não irá atualizar o valor do gold se o valor for undefined
     if (typeof savedGame.cursorCost !== "undefined") cursorCost = savedGame.cursorCost;
     if (typeof savedGame.cursorAmount !== "undefined") cursorAmount = savedGame.cursorAmount;
 }
@@ -90,3 +92,12 @@ document.addEventListener("keydown", function(event){ // tecla pressionada o eve
         saveGame(); // salve o jogo
     } 
 }, false)
+
+// Function Reset Game
+function resetGame(){
+    if (confirm("Tem certeza que deseja resetar o save do jogo? \n \nATENÇÃO: Isso não trará nenhum benificio adicional")) {
+        let gameSave = {};
+        localStorage.setItem("gameSave", JSON.stringify(gameSave));
+        location.reload(); // Garante que assim que confirmar irá recarregar a pagina assim executando a função "window.onload"
+    }
+}
