@@ -1,10 +1,14 @@
 /* Event Listeners */
 document.querySelector("#clickHere").addEventListener("click", () => { game.addToGold(game.clickPower) });
 
-let game = { // objeto onde ficá todos os nossos dados a serem salvos
+
+/* 
+    Objeto onde ficá todos os nossos dados a serem salvos
+    E as funcionalidades do jogo
+*/
+let game = {
     currentGold: 0,                         // Gold Atual
     totalGoldEarned: 0,                     // Gold TOTAL já adquirido, mesmo gastado não diminui
-    goldPerSecond: 0,                       // Gold Por Segundo
     clickPower: 1,                          // Quantia de gold ganha por click
 
     addToGold: function (amount) {            // Adiciona ao gold atual a quantia passada
@@ -12,15 +16,40 @@ let game = { // objeto onde ficá todos os nossos dados a serem salvos
         this.totalGoldEarned += amount;     // atualiza o valor do gold total já adquirido
         display.updateGold();               // Executa a função dentro do objeto display que irá atualizar na tela o valor do gold atual
     },
+
+    getGoldPerSecond: function() {
+        let goldPerSecond = 0
+        for (index = 0; index < hero.name.length; index++){ // o index começa no 0, enquanto o index for menor que o tamanho de name, executa e aumenta 1 no numero do index
+            goldPerSecond += hero.income[index] * hero.level[index] // irá percorrer nosso array atribuindo ao GpS a quantia de gold que o heroi dá X o seu level
+        };
+        return goldPerSecond; // retorna essa variavel para o lugar onde a função foi chamada
+    },
 };
 
-let display = { // Objeto onde ficá todo que será mostrado na tela
+
+/* 
+    Objeto onde ficá todo que será mostrado na tela
+*/
+let display = { 
     updateGold: function () {
         document.querySelector('#totalGold').innerText = game.currentGold
+        document.querySelector('#goldPerSecond').innerText = game.getGoldPerSecond();
         document.title = game.currentGold + " - The Waystone Clicker"
     }
 };
 
+
+/* 
+    Quando carregar a guia irá executar essas funções
+*/
+window.onload = function() {
+    display.updateGold();
+}
+
+
+/* 
+    Onde ficará nossos personagens que podem ser adquiridos
+*/
 let hero = {
     name: [
         "Fox",
