@@ -1,6 +1,6 @@
 /* Event Listeners */
 document.querySelector("#clickHere").addEventListener("click", () => { game.addToGold(game.clickPower) });
-
+document.querySelector("#buyFox").addEventListener("click",() => { hero.purchaseHero(0) })
 
 /* 
     Objeto onde ficá todos os nossos dados a serem salvos

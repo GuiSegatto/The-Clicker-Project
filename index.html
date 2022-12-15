@@ -1,17 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src="script.js"></script>
+    <title>The Waystone Clicker</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <p>Gold: <span id="totalGold">0</span></p>
-    <button id="clickHere">click</button>
-    <button id="buyFox">Fox [Price: <span id="cursorCost">15</span>] -- Amount:[<span id="cursorAmount">0</span>]</button>
-    <button id="saveGame">Save Game!</button>
-    <button id="resetGame">Reset Game!!!!!</button>
+    <div class="container">
+        <div class="gold-info">
+            <p>Current Gold: <span id="currentGold">0</span></p>
+            <p>Gold Per Second: <span id="goldPerSecond"> 0</span></p>
+        </div>
+        <div class="click-here">Click Here</div>
+    </div>
+
+    <div class="container-heroes">
+        <div class="hero-wrapper">
+            <div class="hero-img">hero img</div>
+            <div class="hero-name-wrapper">
+                <p>Meu primeiro heroi</p>
+                <div class="hero-upgrades">
+                    0 0 0 0 0 0 0
+                </div>
+            </div>
+            <div class="hero-info">
+                <p>Hero Level: <span class="heroLevel">0</span></p>
+                <p>Hero GpS: <span class="heroIncome">0</span></p>
+            </div>
+        </div>
+        <div class="hero-wrapper">
+            <div class="hero-img">hero img</div>
+            <div class="hero-name-wrapper">
+                <p>Meu primeiro heroi</p>
+                <div class="hero-upgrades">
+                    0 0 0 0 0 0 0
+                </div>
+            </div>
+            <div class="hero-info">
+                <p>Hero Level: <span class="heroLevel">0</span></p>
+                <p>Hero GpS: <span class="heroIncome">0</span></p>
+            </div>
+        </div>
+        <div class="hero-wrapper">
+            <div class="hero-img">hero img</div>
+            <div class="hero-name-wrapper">
+                <p>Meu primeiro heroi</p>
+                <div class="hero-upgrades">
+                    0 0 0 0 0 0 0
+                </div>
+            </div>
+            <div class="hero-info">
+                <p>Hero Level: <span class="heroLevel">0</span></p>
+                <p>Hero GpS: <span class="heroIncome">0</span></p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
