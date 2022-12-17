@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;;
+    font-family: 'Josefin Sans', sans-serif;
+    ;
 }
 
 body {
@@ -12,11 +14,36 @@ body {
     justify-content: space-evenly;
     align-items: center;
     min-height: 100vh;
+
 }
 
+.test {
+    background-image: url(./images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(10px);
+
+
+    min-height: 100vh;
+    width:100vw;
+    position: absolute;
+    z-index: -1;
+}
+
+/* 
+    CONTAINER CLICK
+    E INFORMAÇÕES DO GOLD
+*/
+
 .container {
-    border: 1px solid red;
+    background-color: #f0f0f4;
+    border-radius: 20px;
     padding: 2rem;
+
+    -webkit-box-shadow: 0px 12px 20px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 12px 20px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 12px 20px 5px rgba(0, 0, 0, 0.75);
 }
 
 .gold-info {
@@ -32,24 +59,56 @@ body {
     min-height: 30vh;
     min-width: 20vh;
     margin-top: 2rem;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    user-select: none;
+}
+
+/* 
+    HEROIS
+*/
+.container-shadow{
+    border: 1px solid black;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 12px 20px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 12px 20px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 12px 20px 5px rgba(0, 0, 0, 0.75);
+
+}
+
+.container-border {
+padding: 1rem;
+border-radius: 40px;
+background: rgb(114, 55, 7);
+background: linear-gradient(0deg, rgba(114,55,7,1) 8%, rgba(47,23,3,1) 50%);
+
+-webkit-box-shadow: inset 19px 31px 52px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 19px 31px 52px 6px rgba(0,0,0,0.75);
+box-shadow: inset 19px 31px 52px 6px rgba(0,0,0,0.75);;
 }
 
 
-
-.container-heroes {
-    border: 1px solid red;
+.container-background {
+    border-radius: 20px;
+    background: rgb(122,77,56);
+    background: linear-gradient(0deg, rgba(122,77,56,1) 25%, rgba(92,52,33,1) 63%);
     padding: 2rem;
+
+    -webkit-box-shadow: inset 13px 14px 72px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 13px 14px 72px -6px rgba(0,0,0,0.75);
+    box-shadow: inset 13px 14px 72px -6px rgba(0,0,0,0.75);
+    
+
 }
 
 .hero-wrapper {
     display: flex;
     margin-bottom: 1.5rem;
-    border: 1px solid red;
     padding: 0.75rem;
+    border-radius: 15px;
 }
 
 .hero-img {
@@ -59,11 +118,48 @@ body {
 }
 
 .hero-name-wrapper {
-    margin-right: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+.buy-hero {
+    padding: 0 1.5rem;
+    margin: 0.75rem 1rem;
+    font-size: 1.5rem;
+
+    border-radius: 5px;
+    border-style: none;
+
+
+    font-weight: 700;
+
+    color: transparent;
+    text-shadow: 2px 2px 3px #1f0b00;
+    background-color: #000000;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+    font-family: 'Henny Penny', cursive;
+
+    transition: 0.3s ease;
+}
+
+.buy-hero:hover{
+    color: rgb(252, 218, 66);
+    background-color: #fcda42;
+    text-shadow: 1px 1px 15px rgba(252, 218, 66, 1);
+    transform: rotate(-7deg);
+}
+
+.glow:hover {
+    color: rgba(252, 118, 75, 1);
+    background-color: rgba(252, 118, 75, 1);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    
+}
+
 
 .hero-info {
     display: flex;
