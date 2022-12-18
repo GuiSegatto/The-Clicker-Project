@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 * {
     margin: 0;
@@ -26,7 +27,7 @@ body {
 
 
     min-height: 100vh;
-    width:100vw;
+    width: 100vw;
     position: absolute;
     z-index: -1;
 }
@@ -70,7 +71,7 @@ body {
 /* 
     HEROIS
 */
-.container-shadow{
+.container-shadow {
     border: 1px solid black;
     border-radius: 50px;
     -webkit-box-shadow: 0px 12px 20px 5px rgba(0, 0, 0, 0.75);
@@ -80,27 +81,28 @@ body {
 }
 
 .container-border {
-padding: 1rem;
-border-radius: 40px;
-background: rgb(114, 55, 7);
-background: linear-gradient(0deg, rgba(114,55,7,1) 8%, rgba(47,23,3,1) 50%);
+    padding: 1rem;
+    border-radius: 40px;
+    background: rgb(114, 55, 7);
+    background: linear-gradient(0deg, rgba(114, 55, 7, 1) 8%, rgba(47, 23, 3, 1) 50%);
 
--webkit-box-shadow: inset 19px 31px 52px 6px rgba(0,0,0,0.75);
--moz-box-shadow: inset 19px 31px 52px 6px rgba(0,0,0,0.75);
-box-shadow: inset 19px 31px 52px 6px rgba(0,0,0,0.75);;
+    -webkit-box-shadow: inset 19px 31px 52px 6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 19px 31px 52px 6px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 19px 31px 52px 6px rgba(0, 0, 0, 0.75);
+    ;
 }
 
 
 .container-background {
     border-radius: 20px;
-    background: rgb(122,77,56);
-    background: linear-gradient(0deg, rgba(122,77,56,1) 25%, rgba(92,52,33,1) 63%);
+    background: rgb(122, 77, 56);
+    background: linear-gradient(0deg, rgba(122, 77, 56, 1) 25%, rgba(92, 52, 33, 1) 63%);
     padding: 2rem;
 
-    -webkit-box-shadow: inset 13px 14px 72px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 13px 14px 72px -6px rgba(0,0,0,0.75);
-    box-shadow: inset 13px 14px 72px -6px rgba(0,0,0,0.75);
-    
+    -webkit-box-shadow: inset 13px 14px 72px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 13px 14px 72px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 13px 14px 72px -6px rgba(0, 0, 0, 0.75);
+
 
 }
 
@@ -135,8 +137,10 @@ box-shadow: inset 19px 31px 52px 6px rgba(0,0,0,0.75);;
     font-weight: 700;
 
     color: transparent;
-    text-shadow: 2px 2px 3px #1f0b00;
-    background-color: #000000;
+
+    background-color: #1b0d00;
+    color: transparent;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -146,18 +150,20 @@ box-shadow: inset 19px 31px 52px 6px rgba(0,0,0,0.75);;
     transition: 0.3s ease;
 }
 
-.buy-hero:hover{
+.buy-hero:hover {
     color: rgb(252, 218, 66);
     background-color: #fcda42;
     text-shadow: 1px 1px 15px rgba(252, 218, 66, 1);
     transform: rotate(-7deg);
+    font-size: 1.55rem;
 }
 
 .glow:hover {
     color: rgba(252, 118, 75, 1);
     background-color: rgba(252, 118, 75, 1);
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-    
+    font-size: 1.65rem;
+
 }
 
 
@@ -165,4 +171,11 @@ box-shadow: inset 19px 31px 52px 6px rgba(0,0,0,0.75);;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+h3 {
+    color: white;
+    font-size: 1.25rem;
+    text-shadow: 0px 0px 20px rgba(0, 149, 255, 1);
+    font-family: 'Concert One', cursive;
 }
