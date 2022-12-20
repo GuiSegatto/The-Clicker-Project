@@ -13,36 +13,43 @@
 
 <body>
     <div class="test"></div>
-    <div class="container">
-        <div class="gold-info">
-            <p>Current Gold: <span id="currentGold">0</span></p>
-            <p>Gold Per Second: <span id="goldPerSecond"> 0</span></p>
-        </div>
-        <div class="click-here" id="clickHere">Click Here</div>
-    </div>
-    <div class="container-shadow">
     <div class="container-border">
         <div class="container-background">
             <div class="background-layer">
-            <div class="hero-wrapper">
-                <div class="hero-img">hero img</div>
-                <div class="hero-name-wrapper">
-                    <h3>Meu primeiro heroi</h3>
-                    <div class="hero-upgrades">
-                        0 0 0 0 0 0 0
+                <div class="container">
+                    <div class="gold-info">
+                        <p class="current-gold">Current Gold: <span id="currentGold">0</span></p>
+                        <p class="hero-income">Gold Per Second: <span id="goldPerSecond"> 0</span></p>
                     </div>
-                </div>
-                <button class="buy-hero" id="buyHero">Level-Up<div id="heroCurrentPrice">0</div></button>
-                <div class="hero-info">
-                    <p>Hero Level: <span id="heroLevel">0</span></p>
-                    <p>Hero GpS: <span id="heroIncome">0</span></p>
+                    <div class="click-here" id="clickHere"><span class="click-here-text">Click Here</span></div>
                 </div>
             </div>
-            
         </div>
     </div>
+    <div class="container-shadow">
+        <div class="container-border">
+            <div class="container-background">
+                <div class="background-layer">
+                    <div class="hero-wrapper">
+                        <div class="hero-img">hero img</div>
+                        <div class="hero-name-wrapper">
+                            <h3 id="heroName">Meu primeiro heroi</h3>
+                            <div class="hero-upgrades">
+                                0 0 0 0 0 0 0
+                            </div>
+                        </div>
+                        <div class="hero-info">
+                            <p class="hero-level">Hero Level: <span id="heroLevel">0</span></p>
+                            <p class="hero-income">Hero GpS: <span id="heroIncome">0</span></p>
+                        </div>
+                        <button class="buy-hero" id="buyHero">Level-Up<div id="heroCurrentPrice">0</div>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 
 </html>

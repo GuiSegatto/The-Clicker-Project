@@ -5,10 +5,6 @@ let button = document.querySelector('#buyHero');
 
 button.addEventListener('click', buyAnimation);
 
-function buyAnimationDelay () {
-    
-}
-
 const timeout = setTimeout(buyAnimation)
 
 
@@ -20,3 +16,16 @@ function buyAnimation () {
    
 }
 
+
+
+
+let clickHere = document.querySelector(".click-here-text")
+
+clickHere.addEventListener('click', clicked)
+
+function clicked() {
+    clickHere.classList.add('clicked')
+    setTimeout(() => {
+        clickHere.classList.remove('clicked')
+    }, 120)
+}
