@@ -22,6 +22,20 @@ let game = {
         };
         return goldPerSecond; // retorna essa variavel para o lugar onde a função foi chamada
     },
+
+    getHeroGoldPerSecond: function (index) {
+        let currentGpS = 0
+        currentGpS = hero.level[index] * hero.baseIncome[index]
+        return currentGpS     
+    },
+
+    getNextLevelGoldPerSecond: function (index) {
+        let nextLevelGps = 0
+        let nextLevel = 0
+        nextLevel = hero.level[index] + 1
+        nextLevelGps = nextLevel * hero.baseIncome[index]
+        return nextLevelGps
+    }
 };
 
 
@@ -36,7 +50,7 @@ let display = {
     updateShop: function() {
         document.querySelector('#heroShop').innerHTML = "";
         for (index = 0; index < hero.name.length; index++) {
-            document.querySelector('#heroShop').innerHTML += '<div class="hero-wrapper"><div class="hero-img" id="heroImage">hero img</div><div class="hero-name-wrapper"><h3>'+hero.name[index]+'</h3><div class="hero-upgrades">0 0 0 0 0</div></div><div class="hero-info"><p class="hero-level">Level: <span>'+hero.level[index]+'</span></p><p class="hero-income">Base Income: <span>'+hero.baseIncome[index]+'</span></p></div><button class="buy-hero animate-'+index+'" onclick="hero.purchaseHero('+index+')">Level-Up<div>'+hero.cost[index]+'</div></button></div>'
+            document.querySelector('#heroShop').innerHTML += '<div class="hero-wrapper tooltip"><span class="tooltip-text"><p class="hero-name">'+hero.name[index]+'</p><p class="current-level">Current Level: <span>'+hero.level[index]+'</span></p><br><p class="current-income">Current Income: <span>'+game.getHeroGoldPerSecond(index)+'</span></p><p class="next-level-income">Next Level Income:<span>'+game.getNextLevelGoldPerSecond(index)+'</span></p></span><div class="hero-img" id="heroImage">hero img</div><div class="hero-name-wrapper"><h3>'+hero.name[index]+'</h3><div class="hero-upgrades">0 0 0 0 0</div></div><div class="hero-info"><p class="hero-level">Level: <span>'+hero.level[index]+'</span></p></div><button class="buy-hero animate-'+index+'" onclick="hero.purchaseHero('+index+')">Level-Up<div>'+hero.cost[index]+'</div></button></div>'
         }
     },
 

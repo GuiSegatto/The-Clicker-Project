@@ -12,15 +12,19 @@
 
 body {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     min-height: 100vh;
+    padding: 0 3%;
+
+    background: rgb(13, 13, 13);
+    background: linear-gradient(0deg, rgba(13, 13, 13, 1) 0%, rgba(93, 93, 93, 1) 97%);
 
 }
 
 .test {
-    background: rgb(13,13,13);
-    background: linear-gradient(0deg, rgba(13,13,13,1) 0%, rgba(93,93,93,1) 97%);
+    background: rgb(13, 13, 13);
+    background: linear-gradient(0deg, rgba(13, 13, 13, 1) 0%, rgba(93, 93, 93, 1) 97%);
 
 
     min-height: 100vh;
@@ -61,10 +65,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
 
-.click-here > span {
+.click-here>span {
     user-select: none;
 
     font-family: 'Henny Penny', cursive;
@@ -77,12 +81,12 @@ body {
     rotate: -20deg;
 }
 
-.click-here > span:hover {
+.click-here>span:hover {
     color: #ec780b;
     text-shadow: 0px 0px 5px rgb(243, 125, 15);
 }
 
-.click-here > .clicked:hover {
+.click-here>.clicked:hover {
     color: rgb(216, 0, 0);
     text-shadow: 0px 0px 5px rgb(0, 0, 0);
     font-size: 1.5rem;
@@ -133,12 +137,16 @@ body {
     border-radius: 15px;
 
     user-select: none;
+
+    border-bottom: 2px #1b0d00 solid;
+
 }
 
 .hero-img {
     color: transparent;
     height: 80px;
     margin-right: 1rem;
+    background-color: rgba(0, 0, 0, .3);
 }
 
 .hero-name-wrapper {
@@ -234,4 +242,38 @@ h3 {
     color: rgb(252, 218, 66);
 
     text-shadow: 1px 1px 15px rgba(252, 218, 66, 1);
+}
+
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem 2.75rem;
+    /* border-radius: 30px 50px 50px 30px / 30px 78px 78px 30px; */
+    border-radius: 50px 30px 30px 50px / 78px 30px 30px 78px;
+
+    width: 20rem;
+
+    position: absolute;
+    z-index: 1;
+    left: -82%;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    
+}
+
+.hero-name, .current-level, .current-income, .next-level-income {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.next-level-income {
+    margin-bottom: 0;
 }
