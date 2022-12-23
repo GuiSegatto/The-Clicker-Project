@@ -15,14 +15,14 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    padding: 0 3%;
+    padding: 12% 3%;
 
     background: rgb(13, 13, 13);
     background: linear-gradient(0deg, rgba(13, 13, 13, 1) 0%, rgba(93, 93, 93, 1) 97%);
 
 }
 
-.test {
+.background {
     background: rgb(13, 13, 13);
     background: linear-gradient(0deg, rgba(13, 13, 13, 1) 0%, rgba(93, 93, 93, 1) 97%);
 
@@ -276,4 +276,9 @@ h3 {
 
 .next-level-income {
     margin-bottom: 0;
+}
+
+
+.upgrade-wrapper {
+    margin-bottom: auto;
 }
